@@ -1,13 +1,13 @@
 {
-    "name": "sails-connector-ganimede"
+    "name": "sails-akera"
   , "version": "1.0.0"
-  , "description": "Ganimede network protocol"
+  , "description": "Akera network protocol"
   , "private": true
   , "author": {
       "name": "Marian Edu"
     , "email": "marian.edu@acorn.ro"
   }
-  , "main": "./lib/gnm-connector.js"
+  , "main": "./lib/akera-connector.js"
   , "scripts": {
       "lint": "./node_modules/.bin/jshint ./lib"
     , "checkStyle": "./node_modules/.bin/jscs ."
@@ -15,11 +15,10 @@
     , "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --recursive -R spec test/*-test.js"
     , "posttest": "./node_modules/.bin/istanbul check-coverage"
   },"dependencies": {
-      "ganimede-net":  "*",
+      "akera-net":  "*",
       "winston": "*",
     "async": "~0.8.0",
     "lodash": "~2.4.1",
-    "mongodb": "^2.0.27",
     "waterline-cursor": "~0.0.5",
     "waterline-errors": "~0.10.0"
   },"devDependencies": {

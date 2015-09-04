@@ -1,1 +1,1 @@
-module.exports = require('./lib/gnm-connector.js');
+module.exports = require('./lib/akera-connector.js');
