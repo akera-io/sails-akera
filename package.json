@@ -1,43 +1,84 @@
 {
-    "name": "sails-akera"
-  , "version": "1.0.0"
-  , "description": "Akera network protocol"
-  , "private": true
-  , "author": {
-      "name": "Marian Edu"
-    , "email": "marian.edu@acorn.ro"
-  }
-  , "main": "./lib/akera-connector.js"
-  , "scripts": {
-      "lint": "./node_modules/.bin/jshint ./lib"
-    , "checkStyle": "./node_modules/.bin/jscs ."
-    , "pretest": "npm run-script lint && npm run-script checkStyle"
-    , "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --recursive -R spec test/*-test.js"
-    , "posttest": "./node_modules/.bin/istanbul check-coverage"
-  },"dependencies": {
-      "akera-net":  "*",
-      "winston": "*",
-    "async": "~0.8.0",
-    "lodash": "~2.4.1",
-    "waterline-cursor": "~0.0.5",
-    "waterline-errors": "~0.10.0"
-  },"devDependencies": {
-    "mocha": "*",
-    "waterline-adapter-tests": "~0.10.0",
-    "captains-log": "~0.11.1"
-  },
-  "waterlineAdapter": {
-    "waterlineVersion": "~0.10.0",
-    "interfaces": [
-      "semantic",
-      "queryable",
-      "associations"
-    ]
-  }, "devDependencies": {
-      "mocha": "~1.21.4"
-    , "should": ">= 5.0" 
-    , "istanbul": ">= 0.3.6"
-    , "jshint": ">= 2.6.0"
-    , "jscs":   ">= 1.11"
-  }
+	"name": "sails-akera",
+	"version": "1.0.0",
+	"description": "Akera adapter for Sails.js/Waterline",
+	"keywords": 
+	[
+		"akera",
+		"akera.io",
+		"orm",
+		"waterline",
+		"sails"
+	],
+
+	"author": 
+	{
+		"name": "Marian Edu",
+		"email": "marian.edu@acorn.ro"
+	},
+
+	"license": 
+	{
+		"type": "MIT",
+		"url": "https://github.com/akera-io/sails-akera/raw/master/LICENSE"
+	},
+
+	"repository": 
+	{
+		"type": "git",
+		"url": "git+https://github.com/akera-io/sails-akera.git"
+	},
+
+	"engines": 
+	{
+		"node": ">= 0.10.0"
+	},
+
+	"main": "lib/adapter.js",
+	"scripts": 
+	{
+		"lint": "./node_modules/.bin/jshint ./lib",
+		"checkStyle": "./node_modules/.bin/jscs ./lib",
+		"pretest": "npm run-script lint && npm run-script checkStyle",
+		"test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --recursive -R spec test/*-test.js",
+		"posttest": "./node_modules/.bin/istanbul check-coverage"
+	},
+
+	"dependencies": 
+	{
+		"akera-api": ">= 1.0.16",
+		"async": ">= 1.5.2",
+		"waterline-cursor": ">= 0.0.5",
+		"waterline-errors": ">= 0.10.0"
+	},
+
+	"devDependencies": 
+	{
+		"mocha": ">= 1.21.4",
+		"should": ">= 5.0",
+		"istanbul": ">= 0.3.6",
+		"jshint": ">= 2.6.0",
+		"jscs": ">= 1.11",
+		"waterline-adapter-tests": ">= 0.10.0"
+	},
+
+	"waterlineAdapter": 
+	{
+		"waterlineVersion": "~0.12.0",
+		"interfaces": 
+		[
+			"semantic",
+			"queryable",
+			"associations"
+		]
+	},
+
+	"devDependencies": 
+	{
+		"mocha": "~1.21.4",
+		"should": ">= 5.0",
+		"istanbul": ">= 0.3.6",
+		"jshint": ">= 2.6.0",
+		"jscs": ">= 1.11"
+	}
 }
